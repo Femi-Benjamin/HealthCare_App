@@ -4,7 +4,7 @@ import DashboardNav from "../component/DashboardNav";
 import StatisticCard from "../component/StatisticCard";
 import calendar from "../../assets/calendar.svg";
 import barchart from "../../assets/barchart.svg";
-import iipeople from "../../assets/iiPeople.svg";
+import two from "../../assets/two.svg";
 import ionpeople from "../../assets/ionPeople.svg";
 import menu from "../../assets/menu.svg";
 import iconedit from "../../assets/iconedit.svg";
@@ -61,7 +61,7 @@ const Dashboardd = () => {
                 headingText="Programs"
               />
               <StatisticCard
-                imgSrc={iipeople}
+                imgSrc={two}
                 paragraphText="2,653"
                 headingText="Registered staff"
               />

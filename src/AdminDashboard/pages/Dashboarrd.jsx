@@ -4,7 +4,7 @@ import Sidebarr from "../components/Sidebarr";
 import StatisticCard from "../../DashboardLayout/component/StatisticCard";
 import calendar from "../../assets/calendar.svg";
 import barchart from "../../assets/barchart.svg";
-import iipeople from "../../assets/iiPeople.svg";
+import two from "../../assets/two.svg";
 import menu from "../../assets/menu.svg";
 import iconedit from "../../assets/iconedit.svg";
 import cancelIcon from "../../assets/cancelIcon.svg";
@@ -66,7 +66,7 @@ const Dashboarrd = () => {
                 headingText="Programs"
               />
               <StatisticCard
-                imgSrc={iipeople}
+                imgSrc={two}
                 paragraphText="2,653"
                 headingText="Patients"
               />
