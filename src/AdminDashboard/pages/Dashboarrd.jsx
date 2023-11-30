@@ -7,7 +7,7 @@ import barchart from "../../assets/barchart.svg";
 import two from "../../assets/two.svg";
 import menu from "../../assets/menu.svg";
 import iconedit from "../../assets/iconedit.svg";
-import cancelIcon from "../../assets/cancelIcon.svg";
+import cancelicon from "../../assets/cancelicon.svg";
 import CompleteProfile from "../components/CompleteProfile";
 
 const Dashboarrd = () => {
@@ -112,7 +112,7 @@ const Dashboarrd = () => {
                                   <li>Reschedule</li>
                                 </div>
                                 <div className='flex gap-1 cursor-pointer'>
-                                  <img src={cancelIcon} alt="" />
+                                  <img src={cancelicon} alt="" />
                                   <li className='text-[#D4491C]'>Cancel</li>
                                 </div>
                               </ul>
@@ -143,7 +143,7 @@ const Dashboarrd = () => {
                                   <li>Reschedule</li>
                                 </div>
                                 <div className='flex gap-1 cursor-pointer'>
-                                  <img src={cancelIcon} alt="" />
+                                  <img src={cancelicon} alt="" />
                                   <li className='text-[#D4491C]'>Cancel</li>
                                 </div>
                               </ul>
@@ -174,7 +174,7 @@ const Dashboarrd = () => {
                                   <li>Reschedule</li>
                                 </div>
                                 <div className='flex gap-1 cursor-pointer'>
-                                  <img src={cancelIcon} alt="" />
+                                  <img src={cancelicon} alt="" />
                                   <li className='text-[#D4491C]'>Cancel</li>
                                 </div>
                               </ul>
@@ -205,7 +205,7 @@ const Dashboarrd = () => {
                                   <li>Reschedule</li>
                                 </div>
                                 <div className='flex gap-1 cursor-pointer'>
-                                  <img src={cancelIcon} alt="" />
+                                  <img src={cancelicon} alt="" />
                                   <li className='text-[#D4491C]'>Cancel</li>
                                 </div>
                               </ul>
@@ -236,7 +236,7 @@ const Dashboarrd = () => {
                                   <li>Reschedule</li>
                                 </div>
                                 <div className='flex gap-1 cursor-pointer'>
-                                  <img src={cancelIcon} alt="" />
+                                  <img src={cancelicon} alt="" />
                                   <li className='text-[#D4491C]'>Cancel</li>
                                 </div>
                               </ul>
