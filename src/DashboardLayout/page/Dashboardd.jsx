@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import Sidebar from "../component/Sidebar";
 import DashboardNav from "../component/DashboardNav";
 import StatisticCard from "../component/StatisticCard";
@@ -44,9 +44,11 @@ const Dashboardd = () => {
             <Sidebar />
           </div>
 
-          <div className="px-2 pt-10 mx-auto">
+          <div className="px-3 pt-10 mx-auto">
             <div>
-              <h1 className="text-4xl font-bold leading-[146.5%] text-[#00395B] pb-12">Dashboard</h1>
+              <h1 className="text-4xl font-bold leading-[146.5%] text-[#00395B] pb-12">
+                Dashboard
+              </h1>
             </div>
 
             <div className="grid grid-cols-4 gap-10 pb-12">
@@ -74,7 +76,9 @@ const Dashboardd = () => {
 
             <div className="py-">
               <div className="bg-white p-5 h-auto">
-                <h1 className="text-4xl font-bold leading-[146.5%] text-[#00395B] py-7">Appointments Overview</h1>
+                <h1 className="text-4xl font-bold leading-[146.5%] text-[#00395B] py-7">
+                  Appointments Overview
+                </h1>
                 <div className="overflow-x-auto">
                   <table className="min-w-full border-collapse text-[#555] font-medium text-base">
                     <thead className="bg-neutral-100 text-[#777]">
@@ -99,7 +103,9 @@ const Dashboardd = () => {
                         </div>
                         <td className="px-4 py-2">Dr. Ibrahim Adekunle</td>
                         <div className="bg-[#E9F6F4] rounded-2xl">
-                          <td className="px-4 py-2 text-[#5EB4A8]">Completed</td>
+                          <td className="px-4 py-2 text-[#5EB4A8]">
+                            Completed
+                          </td>
                         </div>
 
                         <td className="px-4 py-2" onClick={toggleMenu1}>
@@ -107,13 +113,13 @@ const Dashboardd = () => {
                           {isMenuOpen1 && (
                             <div className="bg-white border border-gray-200 rounded shadow-md p-2 left-0">
                               <ul>
-                                <div className='flex gap-2'>
+                                <div className="flex gap-2">
                                   <img src={iconedit} alt="" />
                                   <li>Edit</li>
                                 </div>
-                                <div className='flex gap-1 cursor-pointer'>
+                                <div className="flex gap-1 cursor-pointer">
                                   <img src={cancell} alt="" />
-                                  <li className='text-[#D4491C]'>Cancel</li>
+                                  <li className="text-[#D4491C]">Cancel</li>
                                 </div>
                               </ul>
                             </div>
@@ -138,13 +144,13 @@ const Dashboardd = () => {
                           {isMenuOpen2 && (
                             <div className="bg-white border border-gray-200 rounded shadow-md p-2 left-0">
                               <ul>
-                                <div className='flex gap-2'>
+                                <div className="flex gap-2">
                                   <img src={iconedit} alt="" />
                                   <li>Edit</li>
                                 </div>
-                                <div className='flex gap-1 cursor-pointer'>
+                                <div className="flex gap-1 cursor-pointer">
                                   <img src={cancell} alt="" />
-                                  <li className='text-[#D4491C]'>Cancel</li>
+                                  <li className="text-[#D4491C]">Cancel</li>
                                 </div>
                               </ul>
                             </div>
@@ -157,11 +163,15 @@ const Dashboardd = () => {
                         <td className="px-4 py-2">Amina Lawal</td>
                         <td className="px-4 py-2">20 Nov, 23 - 4:00 PM</td>
                         <div className="bg-[#EFF6FA] rounded-2xl m-5">
-                          <td className="px-4 py-2 text-[#3F9AD0]">Consultation</td>
+                          <td className="px-4 py-2 text-[#3F9AD0]">
+                            Consultation
+                          </td>
                         </div>
                         <td className="px-4 py-2">Pharm. Rita Adebayo</td>
                         <div className="bg-[#FFECEB] rounded-2xl">
-                          <td className="px-4 py-2 text-[#E58C84]">Scheduled</td>
+                          <td className="px-4 py-2 text-[#E58C84]">
+                            Scheduled
+                          </td>
                         </div>
 
                         <td className="px-4 py-2" onClick={toggleMenu3}>
@@ -169,13 +179,13 @@ const Dashboardd = () => {
                           {isMenuOpen3 && (
                             <div className="bg-white border border-gray-200 rounded shadow-md p-2 left-0">
                               <ul>
-                                <div className='flex gap-2'>
+                                <div className="flex gap-2">
                                   <img src={iconedit} alt="" />
                                   <li>Edit</li>
                                 </div>
-                                <div className='flex gap-1 cursor-pointer'>
+                                <div className="flex gap-1 cursor-pointer">
                                   <img src={cancell} alt="" />
-                                  <li className='text-[#D4491C]'>Cancel</li>
+                                  <li className="text-[#D4491C]">Cancel</li>
                                 </div>
                               </ul>
                             </div>
@@ -188,11 +198,15 @@ const Dashboardd = () => {
                         <td className="px-4 py-2">Tolu Adeyemi</td>
                         <td className="px-4 py-2">20 Nov, 23 - 11:00 AM</td>
                         <div className="bg-[#FFECEB] rounded-2xl m-5">
-                          <td className="px-4 py-2 text-[#E58C84]">Vaccination</td>
+                          <td className="px-4 py-2 text-[#E58C84]">
+                            Vaccination
+                          </td>
                         </div>
                         <td className="px-4 py-2">Dr. Olu Adewale</td>
                         <div className="bg-[#F8EFFA] rounded-2xl">
-                          <td className="px-4 py-2 text-[#9145BF]">Completed</td>
+                          <td className="px-4 py-2 text-[#9145BF]">
+                            Completed
+                          </td>
                         </div>
 
                         <td className="px-4 py-2" onClick={toggleMenu4}>
@@ -200,13 +214,13 @@ const Dashboardd = () => {
                           {isMenuOpen4 && (
                             <div className="bg-white border border-gray-200 rounded shadow-md p-2 left-0">
                               <ul>
-                                <div className='flex gap-2'>
+                                <div className="flex gap-2">
                                   <img src={iconedit} alt="" />
                                   <li>Edit</li>
                                 </div>
-                                <div className='flex gap-1 cursor-pointer'>
+                                <div className="flex gap-1 cursor-pointer">
                                   <img src={cancell} alt="" />
-                                  <li className='text-[#D4491C]'>Cancel</li>
+                                  <li className="text-[#D4491C]">Cancel</li>
                                 </div>
                               </ul>
                             </div>
@@ -219,11 +233,15 @@ const Dashboardd = () => {
                         <td className="px-4 py-2">Tolu Adeyemi</td>
                         <td className="px-4 py-2">20 Nov, 23 - 11:00 AM</td>
                         <div className="bg-[#F1F9F8] rounded-2xl m-5">
-                          <td className="px-4 py-2 text-[#5EB4A8]">Vaccination</td>
+                          <td className="px-4 py-2 text-[#5EB4A8]">
+                            Vaccination
+                          </td>
                         </div>
                         <td className="px-4 py-2">Pharm. Uzo Ezewe</td>
                         <div className="bg-[#EFF6FA] rounded-2xl">
-                          <td className="px-4 py-2 text-[#3F9AD0]">Scheduled</td>
+                          <td className="px-4 py-2 text-[#3F9AD0]">
+                            Scheduled
+                          </td>
                         </div>
 
                         <td className="px-4 py-2" onClick={toggleMenu5}>
@@ -231,13 +249,13 @@ const Dashboardd = () => {
                           {isMenuOpen5 && (
                             <div className="bg-white border border-gray-200 rounded shadow-md p-2 left-0">
                               <ul>
-                                <div className='flex gap-2'>
+                                <div className="flex gap-2">
                                   <img src={iconedit} alt="" />
                                   <li>Edit</li>
                                 </div>
-                                <div className='flex gap-1 cursor-pointer'>
+                                <div className="flex gap-1 cursor-pointer">
                                   <img src={cancell} alt="" />
-                                  <li className='text-[#D4491C]'>Cancel</li>
+                                  <li className="text-[#D4491C]">Cancel</li>
                                 </div>
                               </ul>
                             </div>

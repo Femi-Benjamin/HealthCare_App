@@ -11,7 +11,7 @@ const Drop_down = () => {
     setExpanded(isExpanded ? panel : false);
   };
   return (
-    <div>
+    <div className="px-36 py-10">
       <Accordion
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}

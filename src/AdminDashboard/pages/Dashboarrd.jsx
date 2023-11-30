@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import DashboardNav from "../../DashboardLayout/component/DashboardNav";
 import Sidebarr from "../components/Sidebarr";
 import StatisticCard from "../../DashboardLayout/component/StatisticCard";
@@ -44,20 +44,21 @@ const Dashboarrd = () => {
             <Sidebarr />
           </div>
 
-          <div className="px-2 py-10 mx-auto">
-
+          <div className="px-3 pt-10 mx-auto">
             <div>
               <CompleteProfile />
             </div>
 
             <div>
-              <h1 className="text-4xl font-bold leading-[146.5%] text-[#00395B] pb-12">Dashboard</h1>
+              <h1 className="text-4xl font-bold leading-[146.5%] text-[#00395B] pb-7">
+                Dashboard
+              </h1>
             </div>
 
-            <div className="grid grid-cols-4 gap-10 pb-12">
+            <div className="grid grid-cols-4 gap-10 pb-10">
               <StatisticCard
                 imgSrc={calendar}
-                paragraphText="263"
+                paragraphText="18"
                 headingText="Appointments"
               />
               <StatisticCard
@@ -67,14 +68,16 @@ const Dashboarrd = () => {
               />
               <StatisticCard
                 imgSrc={two}
-                paragraphText="2,653"
+                paragraphText="20"
                 headingText="Patients"
               />
             </div>
 
             <div className="py-">
               <div className="bg-white p-5 h-auto">
-                <h1 className="text-4xl font-bold leading-[146.5%] text-[#00395B] py-7">My Appointments</h1>
+                <h1 className="text-4xl font-bold leading-[146.5%] text-[#00395B] py-7">
+                  My Appointments
+                </h1>
                 <div className="overflow-x-auto">
                   <table className="min-w-full border-collapse text-[#555] font-medium text-base">
                     <thead className="bg-neutral-100 text-[#777]">
@@ -99,7 +102,9 @@ const Dashboarrd = () => {
                         </div>
                         <td className="px-4 py-2">chioma.nwosu@email.com</td>
                         <div className="bg-[#E9F6F4] rounded-2xl">
-                          <td className="px-4 py-2 text-[#5EB4A8]">Completed</td>
+                          <td className="px-4 py-2 text-[#5EB4A8]">
+                            Completed
+                          </td>
                         </div>
 
                         <td className="px-4 py-2" onClick={toggleMenu1}>
@@ -107,13 +112,13 @@ const Dashboarrd = () => {
                           {isMenuOpen1 && (
                             <div className="bg-white border border-gray-200 rounded shadow-md p-2 left-0">
                               <ul>
-                                <div className='flex gap-2'>
+                                <div className="flex gap-2">
                                   <img src={iconedit} alt="" />
                                   <li>Reschedule</li>
                                 </div>
-                                <div className='flex gap-1 cursor-pointer'>
+                                <div className="flex gap-1 cursor-pointer">
                                   <img src={cancell} alt="" />
-                                  <li className='text-[#D4491C]'>Cancel</li>
+                                  <li className="text-[#D4491C]">Cancel</li>
                                 </div>
                               </ul>
                             </div>
@@ -138,13 +143,13 @@ const Dashboarrd = () => {
                           {isMenuOpen2 && (
                             <div className="bg-white border border-gray-200 rounded shadow-md p-2 left-0">
                               <ul>
-                                <div className='flex gap-2'>
+                                <div className="flex gap-2">
                                   <img src={iconedit} alt="" />
                                   <li>Reschedule</li>
                                 </div>
-                                <div className='flex gap-1 cursor-pointer'>
+                                <div className="flex gap-1 cursor-pointer">
                                   <img src={cancell} alt="" />
-                                  <li className='text-[#D4491C]'>Cancel</li>
+                                  <li className="text-[#D4491C]">Cancel</li>
                                 </div>
                               </ul>
                             </div>
@@ -157,11 +162,15 @@ const Dashboarrd = () => {
                         <td className="px-4 py-2">Amina Lawal</td>
                         <td className="px-4 py-2">20 Nov, 23 - 4:00 PM</td>
                         <div className="bg-[#EFF6FA] rounded-2xl m-5">
-                          <td className="px-4 py-2 text-[#3F9AD0]">Consultation</td>
+                          <td className="px-4 py-2 text-[#3F9AD0]">
+                            Consultation
+                          </td>
                         </div>
                         <td className="px-4 py-2">lawal.amos5@email.com</td>
                         <div className="bg-[#FFECEB] rounded-2xl">
-                          <td className="px-4 py-2 text-[#E58C84]">Scheduled</td>
+                          <td className="px-4 py-2 text-[#E58C84]">
+                            Scheduled
+                          </td>
                         </div>
 
                         <td className="px-4 py-2" onClick={toggleMenu3}>
@@ -169,13 +178,13 @@ const Dashboarrd = () => {
                           {isMenuOpen3 && (
                             <div className="bg-white border border-gray-200 rounded shadow-md p-2 left-0">
                               <ul>
-                                <div className='flex gap-2'>
+                                <div className="flex gap-2">
                                   <img src={iconedit} alt="" />
                                   <li>Reschedule</li>
                                 </div>
-                                <div className='flex gap-1 cursor-pointer'>
+                                <div className="flex gap-1 cursor-pointer">
                                   <img src={cancell} alt="" />
-                                  <li className='text-[#D4491C]'>Cancel</li>
+                                  <li className="text-[#D4491C]">Cancel</li>
                                 </div>
                               </ul>
                             </div>
@@ -188,11 +197,15 @@ const Dashboarrd = () => {
                         <td className="px-4 py-2">Tolu Adeyemi</td>
                         <td className="px-4 py-2">20 Nov, 23 - 11:00 AM</td>
                         <div className="bg-[#FFECEB] rounded-2xl m-5">
-                          <td className="px-4 py-2 text-[#E58C84]">Vaccination</td>
+                          <td className="px-4 py-2 text-[#E58C84]">
+                            Vaccination
+                          </td>
                         </div>
                         <td className="px-4 py-2">adeyemi.tolu@email.com</td>
                         <div className="bg-[#F8EFFA] rounded-2xl">
-                          <td className="px-4 py-2 text-[#9145BF]">Completed</td>
+                          <td className="px-4 py-2 text-[#9145BF]">
+                            Completed
+                          </td>
                         </div>
 
                         <td className="px-4 py-2" onClick={toggleMenu4}>
@@ -200,13 +213,13 @@ const Dashboarrd = () => {
                           {isMenuOpen4 && (
                             <div className="bg-white border border-gray-200 rounded shadow-md p-2 left-0">
                               <ul>
-                                <div className='flex gap-2'>
+                                <div className="flex gap-2">
                                   <img src={iconedit} alt="" />
                                   <li>Reschedule</li>
                                 </div>
-                                <div className='flex gap-1 cursor-pointer'>
+                                <div className="flex gap-1 cursor-pointer">
                                   <img src={cancell} alt="" />
-                                  <li className='text-[#D4491C]'>Cancel</li>
+                                  <li className="text-[#D4491C]">Cancel</li>
                                 </div>
                               </ul>
                             </div>
@@ -219,11 +232,17 @@ const Dashboarrd = () => {
                         <td className="px-4 py-2">Tolu Adeyemi</td>
                         <td className="px-4 py-2">20 Nov, 23 - 11:00 AM</td>
                         <div className="bg-[#F1F9F8] rounded-2xl m-5">
-                          <td className="px-4 py-2 text-[#5EB4A8]">Vaccination</td>
+                          <td className="px-4 py-2 text-[#5EB4A8]">
+                            Vaccination
+                          </td>
                         </div>
-                        <td className="px-4 py-2">olumide.olatunjife@email.com</td>
+                        <td className="px-4 py-2">
+                          olumide.olatunjife@email.com
+                        </td>
                         <div className="bg-[#EFF6FA] rounded-2xl">
-                          <td className="px-4 py-2 text-[#3F9AD0]">Scheduled</td>
+                          <td className="px-4 py-2 text-[#3F9AD0]">
+                            Scheduled
+                          </td>
                         </div>
 
                         <td className="px-4 py-2" onClick={toggleMenu5}>
@@ -231,13 +250,13 @@ const Dashboarrd = () => {
                           {isMenuOpen5 && (
                             <div className="bg-white border border-gray-200 rounded shadow-md p-2 left-0">
                               <ul>
-                                <div className='flex gap-2'>
+                                <div className="flex gap-2">
                                   <img src={iconedit} alt="" />
                                   <li>Reschedule</li>
                                 </div>
-                                <div className='flex gap-1 cursor-pointer'>
+                                <div className="flex gap-1 cursor-pointer">
                                   <img src={cancell} alt="" />
-                                  <li className='text-[#D4491C]'>Cancel</li>
+                                  <li className="text-[#D4491C]">Cancel</li>
                                 </div>
                               </ul>
                             </div>
@@ -253,7 +272,7 @@ const Dashboarrd = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Dashboarrd
+export default Dashboarrd;

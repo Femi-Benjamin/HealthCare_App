@@ -19,7 +19,6 @@ const StudentsDashboard = () => {
   const toggleMenu1 = () => {
     setIsMenuOpen1(!isMenuOpen1);
   };
-
   const toggleMenu2 = () => {
     setIsMenuOpen2(!isMenuOpen2);
   };
@@ -42,7 +41,7 @@ const StudentsDashboard = () => {
             <StudentSidebar />
           </div>
 
-          <div className="px-32 py-10 mx-auto">
+          <div className="px- p-10 mx-auto">
             <div>
               <CompleteProfile />
             </div>
@@ -54,7 +53,7 @@ const StudentsDashboard = () => {
                 </h1>
               </div>
 
-              <div className="flex justify-end mb-10">
+              <div className="flex justify-end mb-">
                 <Link to="#">
                   <div className="flex gap-2 items-center text-[#005F97] text-base font-medium">
                     <div className="border border-[#005F97] rounded-full px-2">
