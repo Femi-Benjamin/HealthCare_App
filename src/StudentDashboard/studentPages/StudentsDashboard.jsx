@@ -7,7 +7,7 @@ import Universitylogo from "../../assets/Universitylogo.svg";
 import Card from "../../DashboardLayout/component/Card";
 import menu from "../../assets/menu.svg";
 import iconedit from "../../assets/iconedit.svg";
-import cancelIcon from "../../assets/cancelIcon.svg";
+import cancell from "../../assets/cancell.svg";
 
 const StudentsDashboard = () => {
   const [isMenuOpen1, setIsMenuOpen1] = useState(false);
@@ -136,7 +136,7 @@ const StudentsDashboard = () => {
                                   <li>Reschedule</li>
                                 </div>
                                 <div className="flex gap-1 cursor-pointer">
-                                  <img src={cancelIcon} alt="" />
+                                  <img src={cancell} alt="" />
                                   <li className="text-[#D4491C]">Cancel</li>
                                 </div>
                               </ul>
@@ -167,7 +167,7 @@ const StudentsDashboard = () => {
                                   <li>Reschedule</li>
                                 </div>
                                 <div className="flex gap-1 cursor-pointer">
-                                  <img src={cancelIcon} alt="" />
+                                  <img src={cancell} alt="" />
                                   <li className="text-[#D4491C]">Cancel</li>
                                 </div>
                               </ul>
@@ -202,7 +202,7 @@ const StudentsDashboard = () => {
                                   <li>Reschedule</li>
                                 </div>
                                 <div className="flex gap-1 cursor-pointer">
-                                  <img src={cancelIcon} alt="" />
+                                  <img src={cancell} alt="" />
                                   <li className="text-[#D4491C]">Cancel</li>
                                 </div>
                               </ul>
@@ -237,7 +237,7 @@ const StudentsDashboard = () => {
                                   <li>Reschedule</li>
                                 </div>
                                 <div className="flex gap-1 cursor-pointer">
-                                  <img src={cancelIcon} alt="" />
+                                  <img src={cancell} alt="" />
                                   <li className="text-[#D4491C]">Cancel</li>
                                 </div>
                               </ul>
@@ -274,7 +274,7 @@ const StudentsDashboard = () => {
                                   <li>Reschedule</li>
                                 </div>
                                 <div className="flex gap-1 cursor-pointer">
-                                  <img src={cancelIcon} alt="" />
+                                  <img src={cancell} alt="" />
                                   <li className="text-[#D4491C]">Cancel</li>
                                 </div>
                               </ul>

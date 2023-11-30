@@ -8,7 +8,7 @@ import two from "../../assets/two.svg";
 import ionpeople from "../../assets/ionpeople.svg";
 import menu from "../../assets/menu.svg";
 import iconedit from "../../assets/iconedit.svg";
-import cancelicon from "../../assets/cancelicon.svg";
+import cancell from "../../assets/cancell.svg";
 
 const Dashboardd = () => {
   const [isMenuOpen1, setIsMenuOpen1] = useState(false);
@@ -112,7 +112,7 @@ const Dashboardd = () => {
                                   <li>Edit</li>
                                 </div>
                                 <div className='flex gap-1 cursor-pointer'>
-                                  <img src={cancelicon} alt="" />
+                                  <img src={cancell} alt="" />
                                   <li className='text-[#D4491C]'>Cancel</li>
                                 </div>
                               </ul>
@@ -143,7 +143,7 @@ const Dashboardd = () => {
                                   <li>Edit</li>
                                 </div>
                                 <div className='flex gap-1 cursor-pointer'>
-                                  <img src={cancelicon} alt="" />
+                                  <img src={cancell} alt="" />
                                   <li className='text-[#D4491C]'>Cancel</li>
                                 </div>
                               </ul>
@@ -174,7 +174,7 @@ const Dashboardd = () => {
                                   <li>Edit</li>
                                 </div>
                                 <div className='flex gap-1 cursor-pointer'>
-                                  <img src={cancelicon} alt="" />
+                                  <img src={cancell} alt="" />
                                   <li className='text-[#D4491C]'>Cancel</li>
                                 </div>
                               </ul>
@@ -205,7 +205,7 @@ const Dashboardd = () => {
                                   <li>Edit</li>
                                 </div>
                                 <div className='flex gap-1 cursor-pointer'>
-                                  <img src={cancelicon} alt="" />
+                                  <img src={cancell} alt="" />
                                   <li className='text-[#D4491C]'>Cancel</li>
                                 </div>
                               </ul>
@@ -236,7 +236,7 @@ const Dashboardd = () => {
                                   <li>Edit</li>
                                 </div>
                                 <div className='flex gap-1 cursor-pointer'>
-                                  <img src={cancelicon} alt="" />
+                                  <img src={cancell} alt="" />
                                   <li className='text-[#D4491C]'>Cancel</li>
                                 </div>
                               </ul>
