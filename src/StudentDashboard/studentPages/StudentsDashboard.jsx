@@ -32,6 +32,140 @@ const StudentsDashboard = () => {
     setIsMenuOpen5(!isMenuOpen5);
   };
 
+  const [showBookingForm, setShowBookingForm] = useState(false);
+
+  const toggleBookingForm = () => {
+    setShowBookingForm(!showBookingForm);
+  };
+
+  const BookingForm = () => {
+    const [date, setDate] = useState("");
+    const [reason, setReason] = useState("");
+
+    const handleFormSubmit = (event) => {
+      event.preventDefault();
+      // Simulating a booking action
+      console.log("Booking submitted:", { date, reason });
+      setDate("");
+      setReason("");
+      setShowBookingForm(false);
+
+      // Display alert after form submission
+      window.alert("Your Appointment is Booked!");
+    };
+
+    return (
+      <div className="bg-white p-5 mt-5">
+        <h1 className="text-2xl font-bold text-[#00395B] mb-3  ">
+          Book an Appointment
+        </h1>
+        <form onSubmit={handleFormSubmit}>
+          <div className="mb-4">
+            <label
+              htmlFor="date"
+              className="block text-gray-700 font-medium mb-1"
+            >
+              Appointment Date:
+            </label>
+            <input
+              type="datetime-local"
+              id="date"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+              className="border border-gray-300 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-500"
+              required
+            />
+          </div>
+
+          <div className="flex justify-between">
+          <div className="pb-3">
+            <label
+              htmlFor="name"
+              className="block text-gray-700 font-medium mb-1"
+            >
+            Name:
+            </label>
+            <input type="text"
+              className="border border-gray-300 rounded px-3 py-2 w-full h-10 resize-none focus:outline-none focus:border-blue-500"
+              id="name"
+              placeholder="Your Name"
+            />
+          </div>
+
+          <div className="pb-3">
+            <label
+              htmlFor="department"
+              className="block text-gray-700 font-medium mb-1"
+            >
+            Department:
+            </label>
+            <input type="text"
+              className="border border-gray-300 rounded px-3 py-2 w-full h-10 resize-none focus:outline-none focus:border-blue-500"
+              id="department"
+              placeholder="Your Department"
+            />
+          </div>
+
+        
+          <div className="pb-3">
+            <label
+              htmlFor="registrationNumber"
+              className="block text-gray-700 font-medium mb-1"
+            >
+            Registration Number:
+            </label>
+            <input type="alphanumeric" name="registrationNumber"
+              className="border border-gray-300 rounded px-3 py-2 w-full h-10 resize-none focus:outline-none focus:border-blue-500"
+              id="registrationNumber"
+              placeholder="Registration Number"
+            />
+          </div>
+
+
+          <div className="pb-3">
+            <label
+              htmlFor="department"
+              className="block text-gray-700 font-medium mb-1"
+            >
+              Year of Study:
+            </label>
+            <input type="number"
+              className="border border-gray-300 rounded px-3 py-2 w-full h-10 resize-none focus:outline-none focus:border-blue-500"
+              id="yearofStudy"
+              placeholder="Year of Study"
+            />
+          </div>
+
+          </div>
+
+          <div className="mb-4">
+            <label
+              htmlFor="reason"
+              className="block text-gray-700 font-medium mb-1"
+            >
+              Reason for Appointment:
+            </label>
+            <textarea
+              id="reason"
+              value={reason}
+              onChange={(e) => setReason(e.target.value)}
+              className="border border-gray-300 rounded px-3 py-2 w-full h-20 resize-none focus:outline-none focus:border-blue-500"
+              required
+            ></textarea>
+          </div>
+          <div className="flex justify-end">
+            <button
+              type="submit"
+              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300"
+            >
+              Book Appointment
+            </button>
+          </div>
+        </form>
+      </div>
+    );
+  };
+
   return (
     <>
       <div className="bg-neutral-100">
@@ -286,6 +420,13 @@ const StudentsDashboard = () => {
                 </div>
               </div>
             </div>
+            <button
+              onClick={toggleBookingForm}
+              className="bg-blue-500 text-white px-4 py-2 mt-4 rounded hover:bg-blue-600 transition duration-300"
+            >
+              Book an Appointment
+            </button>
+            {showBookingForm && <BookingForm />}
           </div>
         </div>
       </div>
