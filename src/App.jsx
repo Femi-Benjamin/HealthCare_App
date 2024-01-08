@@ -23,6 +23,7 @@ import AdminSignin from "./AdminDashboard/pages/userdomain/AdminSignin.jsx";
 import StudentsDashboard from "./StudentDashboard/studentPages/StudentsDashboard.jsx";
 import StudentProfile from "./StudentDashboard/studentPages/StudentProfile.jsx";
 import StudentPassword from "./StudentDashboard/studentPages/StudentPassword.jsx";
+import NewProgramm from "./AdminDashboard/pages/NewProgramm.jsx";
 
 function App() {
   return (
@@ -41,10 +42,12 @@ function App() {
           <Route path="/passwordpage" element={<PasswordPage />} />
           <Route path="/newprogram" element={<NewProgram />} />
           <Route path="/staffmembers" element={<StaffMembers />} />
+          <Route path="/newprogramm" element={<NewProgramm />} />
           {/* ///////////////////////////////////////////////// */}
           <Route path="/dashboarrd" element={<Dashboarrd />} />
           <Route path="/programm" element={<Programm />} />
           <Route path="/patients" element={<Patients />} />
+
           {/* <Route path="/setting" element={<Setting />} /> */}
           <Route path="/adminprofile" element={<AdminProfile />} />
           <Route path="/adminpassword" element={<AdminPassword />} />

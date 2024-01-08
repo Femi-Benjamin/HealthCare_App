@@ -2,7 +2,7 @@ import Universitylogo from "../../assets/Universitylogo.svg";
 import radix from "../../assets/radix.svg";
 import { Link } from "react-router-dom";
 import materialnote from "../../assets/materialnote.svg";
-import people from "../../assets/people.svg";
+// import people from "../../assets/people.svg";
 import setting from "../../assets/setting.svg";
 import logout from "../../assets/logout.svg";
 
@@ -23,19 +23,19 @@ const StudentSidebar = () => {
           </div>
         </Link>
 
-        <Link to="#">
+        <Link to="/newprogram">
           <div className="flex px-10 gap-3 hover:bg-[#97d0f1] hover:text-[#00395B] hover:rounded-xl">
             <img src={materialnote} alt="" />
             <li className="py-5  cursor-pointer">Programs</li>
           </div>
         </Link>
 
-        <Link to="#">
+        {/* <Link to="#">
           <div className="flex px-10 gap-3 hover:bg-[#97d0f1] hover:text-[#00395B] hover:rounded-xl">
             <img src={people} alt="" />
             <li className="py-5 cursor-pointer">Patients</li>
           </div>
-        </Link>
+        </Link> */}
 
         <Link to="/studentprofile">
           <div className="flex px-10 gap-3 hover:bg-[#97d0f1] hover:text-[#00395B] hover:rounded-xl">

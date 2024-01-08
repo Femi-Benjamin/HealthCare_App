@@ -1,11 +1,11 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { CustomButton } from "../../static/button";
-import { Link } from "react-router-dom";
-import Sidebar from "../component/Sidebar";
-import DashboardNav from "../component/DashboardNav";
 import file from "../../assets/file.svg";
+import Sidebarr from "../components/Sidebarr";
+import DashboardNav from "../../DashboardLayout/component/DashboardNav";
 
-const Programs = () => {
+const NewProgramm = () => {
   const [isFirstModalOpen, setIsFirstModalOpen] = useState(false);
   const [isSecondModalOpen, setIsSecondModalOpen] = useState(false);
 
@@ -31,7 +31,7 @@ const Programs = () => {
 
       <div className="flex">
         <div>
-          <Sidebar />
+          <Sidebarr />
         </div>
 
         <div className="items-center text-center mx-auto my-auto pb-24">
@@ -57,6 +57,7 @@ const Programs = () => {
           </div>
         </div>
       </div>
+
       {/* /////////////////////////////////////////////////////////////////
           /////////////////////First Modal Structure//////////////////////
           //////////////////////////////////////////////////////////////// 
@@ -186,5 +187,4 @@ const Programs = () => {
     </div>
   );
 };
-
-export default Programs;
+export default NewProgramm;

@@ -1,7 +1,7 @@
+import Card from "../component/Card";
 import { Link } from "react-router-dom";
 import Sidebar from "../component/Sidebar";
 import DashboardNav from "../component/DashboardNav";
-import Card from "../component/Card";
 import Universitylogo from "../../assets/Universitylogo.svg";
 
 const NewProgram = () => {

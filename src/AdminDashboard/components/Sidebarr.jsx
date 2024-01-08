@@ -23,7 +23,7 @@ const Sidebarr = () => {
           </div>
         </Link>
 
-        <Link to="#">
+        <Link to="/programm">
           {/* /programm */}
           <div className="flex px-10 gap-3 hover:bg-[#97d0f1] hover:text-[#00395B] hover:rounded-xl">
             <img src={materialnote} alt="" />
@@ -31,7 +31,7 @@ const Sidebarr = () => {
           </div>
         </Link>
 
-        <Link to="#">
+        <Link to="/patients">
           {/* /patients */}
           <div className="flex px-10 gap-3 hover:bg-[#97d0f1] hover:text-[#00395B] hover:rounded-xl">
             <img src={people} alt="" />
