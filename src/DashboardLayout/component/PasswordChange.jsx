@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useAuth from "../../hooks/useAuth";
 
 const PasswordChange = () => {
   const [currentPassword, setCurrentPassword] = useState("");
@@ -7,6 +8,7 @@ const PasswordChange = () => {
   const [showCurrentPassword, setShowCurrentPassword] = useState(false);
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const { auth } = useAuth();
 
   const handleSaveChanges = () => {
     // Add logic to handle password change
@@ -36,7 +38,7 @@ const PasswordChange = () => {
 
   return (
     <div className="mb-16">
-      {/* <h1 className="text-2xl font-semibold mb-4">Change Password</h1> */}
+      {/* <h1 className="mb-4 text-2xl font-semibold">Change Password</h1> */}
       <form className="space-y-10">
         <div className="grid grid-cols-2 gap-10">
           <div>
@@ -50,7 +52,8 @@ const PasswordChange = () => {
                   id="currentPassword"
                   value={currentPassword}
                   onChange={(e) => setCurrentPassword(e.target.value)}
-                  className="p-2 bg-transparent outline-none h-12 w-80 focus:border-blue-500"
+                  className="h-12 p-2 bg-transparent outline-none w-80 focus:border-blue-500"
+                  value={auth.password}
                 />
               </div>
               <div
@@ -73,7 +76,7 @@ const PasswordChange = () => {
                   id="newPassword"
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
-                  className="p-2 bg-transparent outline-none h-12 w-80 focus:border-blue-500"
+                  className="h-12 p-2 bg-transparent outline-none w-80 focus:border-blue-500"
                 />
               </div>
               <div
@@ -96,7 +99,7 @@ const PasswordChange = () => {
                   id="confirmNewPassword"
                   value={confirmNewPassword}
                   onChange={(e) => setConfirmNewPassword(e.target.value)}
-                  className="p-2 bg-transparent outline-none h-12 w-80 focus:border-blue-500"
+                  className="h-12 p-2 bg-transparent outline-none w-80 focus:border-blue-500"
                 />
               </div>
               <div

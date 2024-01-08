@@ -37,9 +37,9 @@ const PasswordDefault = () => {
   return (
     <div>
       <div>
-        <h1 className="text-2xl font-semibold mb-4">Default password</h1>
+        <h1 className="mb-4 text-2xl font-semibold">Default password</h1>
 
-        <p className="text-base font-medium mb-4">
+        <p className="mb-4 text-base font-medium">
           This password is what your staff members will use to log in to this
           platform
         </p>
@@ -49,13 +49,14 @@ const PasswordDefault = () => {
         <div className="grid grid-cols-2 gap-10">
           <div>
             <label htmlFor="currentpassword" className="text-lg font-medium">
-              Current Password:
+              Default Password:
             </label>
             <div className="flex justify-between items-center border border-[#CCC] rounded-lg w-96">
               <div>
                 <input
-                  className="p-2 bg-transparent outline-none h-12 w-80 focus:border-blue-500"
+                  className="h-12 p-2 bg-transparent outline-none w-80 focus:border-blue-500"
                   type={inputType("current")}
+                  value={"healthcare1234"}
                 />
               </div>
               <div
@@ -63,48 +64,6 @@ const PasswordDefault = () => {
                 onClick={() => togglePasswordVisibility("current")}
               >
                 <h1>{showCurrentPassword ? "Hide" : "Show"}</h1>
-              </div>
-            </div>
-          </div>
-
-          {/* New Password Field */}
-          <div>
-            <label htmlFor="newPassword" className="text-lg font-medium">
-              New Password:
-            </label>
-            <div className="flex justify-between items-center border border-[#CCC] rounded-lg w-96">
-              <div>
-                <input
-                  className="p-2 bg-transparent outline-none h-12 w-80 focus:border-blue-500"
-                  type={inputType("new")}
-                />
-              </div>
-              <div
-                className="p-2 cursor-pointer text-base font-medium text-[#004C79]"
-                onClick={() => togglePasswordVisibility("new")}
-              >
-                <h1>{showNewPassword ? "Hide" : "Show"}</h1>
-              </div>
-            </div>
-          </div>
-
-          {/* Confirm New Password Field */}
-          <div>
-            <label htmlFor="confirmNewPassword" className="text-lg font-medium">
-              Confirm New Password:
-            </label>
-            <div className="flex justify-between items-center border border-[#CCC] rounded-lg w-96">
-              <div>
-                <input
-                  className="p-2 bg-transparent outline-none h-12 w-80 focus:border-blue-500"
-                  type={inputType("confirm")}
-                />
-              </div>
-              <div
-                className="p-2 cursor-pointer text-base font-medium text-[#004C79]"
-                onClick={() => togglePasswordVisibility("confirm")}
-              >
-                <h1>{showConfirmNewPassword ? "Hide" : "Show"}</h1>
               </div>
             </div>
           </div>
