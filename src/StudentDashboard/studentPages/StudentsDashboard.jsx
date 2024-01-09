@@ -1,19 +1,11 @@
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import DashboardNav from '../../DashboardLayout/component/DashboardNav';
 import StudentSidebar from '../../StudentDashboard/studentComponent/StudentSidebar';
-import menu from '../../assets/menu.svg';
-import iconedit from '../../assets/iconedit.svg';
-import cancell from '../../assets/cancell.svg';
 import supabase from '../../config/supabaseClient';
 import useAuth from '../../hooks/useAuth';
 
 const StudentsDashboard = () => {
-	const [isMenuOpen1, setIsMenuOpen1] = useState(false);
-
-	const toggleMenu1 = () => {
-		setIsMenuOpen1(!isMenuOpen1);
-	};
+	const { auth } = useAuth();
 
 	const [showBookingForm, setShowBookingForm] = useState(false);
 
@@ -38,20 +30,20 @@ const StudentsDashboard = () => {
 				setError('Please fill in all the fields correctly');
 				return;
 			}
-	
+
 			// Set the button text to "Sending" during form submission
 			setIsSubmitting(true);
-	
+
 			try {
 				const { data, error } = await supabase
 					.from('appointments')
 					.insert([{ date, name, department, reg, year, reason }]);
-	
+
 				if (error) {
 					console.log(error.message);
 					setError(error.message);
 				}
-	
+
 				if (data) {
 					console.log(data);
 					setDate('');
@@ -94,7 +86,7 @@ const StudentsDashboard = () => {
 						/>
 					</div>
 
-					<div className='flex items-center justify-between'>
+					<div className='flex items-center justify-between gap-2'>
 						<div className='pb-3'>
 							<label
 								htmlFor='name'
@@ -193,10 +185,6 @@ const StudentsDashboard = () => {
 					</div>
 
 					<div className='p-10 mx-auto px-'>
-						{/* <div>
-							<CompleteProfile />
-						</div> */}
-
 						<div className='grid grid-cols-2 gap-10 mb-12 items-cent'>
 							<div>
 								<h1 className='text-4xl text-[#00395B] leading-[146.5%] font-extrabold'>Upcoming Programs</h1>
@@ -241,64 +229,35 @@ const StudentsDashboard = () => {
 							<div className='h-auto p-5 bg-white'>
 								<h1 className='text-4xl font-bold leading-[146.5%] text-[#00395B] py-7'>Your information</h1>
 								<div className='overflow-x-auto'>
-									<table className='min-w-full border-collapse text-[#555] font-medium text-base'>
-										<thead className='bg-neutral-100 text-[#777]'>
-											<tr>
-												<th className='px-4 py-2'>Reg. No</th>
-												<th className='px-4 py-2'>Name</th>
-												<th className='px-4 py-2'>Faculty</th>
-												<th className='px-4 py-2'>Department</th>
-												<th className='px-4 py-2'>Contact Information</th>
-												<th className='px-4 py-2'>Status</th>
-												<th className='px-4 py-2'>Actions</th>
-											</tr>
-										</thead>
+									<div className='mb-3'>
+										<h1 className='text-xl font-bold'>Registration Number:</h1>
+										<p>17/SC/MC/1284</p>
+									</div>
 
-										<tbody>
-											<tr className='border-b'>
-												<td className='px-4 py-2'>17/SC/MC/1284</td>
-												<td className='px-4 py-2'>Chioma Amanda Nwosu</td>
-												<td className='px-4 py-2'>Engineering</td>
-												<td className='px-4 py-5'>Electrical</td>
-												{/* <div className='bg-[#F8EFFA] rounded-2xl m-5'>
-													<td className='px-4 py-2 text-[#9145BF]'>Check-up</td>
-												</div> */}
-												<td className='px-4 py-2'>chioma.nwosu@email.com</td>
-												<div className='bg-[#E9F6F4] rounded-2xl mt-3'>
-													<td className='px-4 py-2 text-[#5EB4A8]'>Completed</td>
-												</div>
+									<div className='mb-3'>
+										<h1 className='text-xl font-bold'>Name:</h1>
+										<p>Olalekan Taiwo</p>
+									</div>
 
-												<td
-													className='px-4 py-2'
-													onClick={toggleMenu1}>
-													<img
-														src={menu}
-														alt=''
-													/>
-													{isMenuOpen1 && (
-														<div className='left-0 p-2 bg-white border border-gray-200 rounded shadow-md'>
-															<ul>
-																<div className='flex gap-2'>
-																	<img
-																		src={iconedit}
-																		alt=''
-																	/>
-																	<li>Reschedule</li>
-																</div>
-																<div className='flex gap-1 cursor-pointer'>
-																	<img
-																		src={cancell}
-																		alt=''
-																	/>
-																	<li className='text-[#D4491C]'>Cancel</li>
-																</div>
-															</ul>
-														</div>
-													)}
-												</td>
-											</tr>
-										</tbody>
-									</table>
+									<div className='mb-3'>
+										<h1 className='text-xl font-bold'>Faculty:</h1>
+										<p>Sciences</p>
+									</div>
+
+									<div className='mb-3'>
+										<h1 className='text-xl font-bold'>Department:</h1>
+										<p>Microbiology</p>
+									</div>
+
+									<div className='mb-3'>
+										<h1 className='text-xl font-bold'>Contact:</h1>
+										<p>{auth.email}</p>
+									</div>
+
+									<div className='mb-3'>
+										<h1 className='text-xl font-bold'>Number:</h1>
+										<p>{auth.phone}</p>
+									</div>
 								</div>
 							</div>
 						</div>
