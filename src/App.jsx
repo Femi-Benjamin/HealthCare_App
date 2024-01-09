@@ -24,6 +24,8 @@ import StudentsDashboard from "./StudentDashboard/studentPages/StudentsDashboard
 import StudentProfile from "./StudentDashboard/studentPages/StudentProfile.jsx";
 import StudentPassword from "./StudentDashboard/studentPages/StudentPassword.jsx";
 import NewProgramm from "./AdminDashboard/pages/NewProgramm.jsx";
+import MoreInfo from "./pages/domainuser/MoreInfo";
+import StudentProgram from "./StudentDashboard/studentPages/StudentPrograms";
 
 function App() {
   return (
@@ -32,6 +34,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/questions" element={<MoreInfo />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/dashboardd" element={<Dashboardd />} />
           <Route path="/programs" element={<Programs />} />
@@ -56,6 +59,7 @@ function App() {
           <Route path="/studentdashboard" element={<StudentsDashboard />} />
           <Route path="/studentprofile" element={<StudentProfile />} />
           <Route path="/studentpassword" element={<StudentPassword />} />
+          <Route path="/studentprogram" element={<StudentProgram />} />
         </Routes>
       </BrowserRouter>
     </>

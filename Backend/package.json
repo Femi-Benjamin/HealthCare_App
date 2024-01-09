@@ -1,0 +1,15 @@
+{
+  "name": "healthcareapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "keywords": [
+    "healthcare",
+    "app"
+  ],
+  "author": "George Olufemi",
+  "license": "ISC"
+}

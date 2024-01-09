@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import DashboardNav from "../../DashboardLayout/component/DashboardNav";
 import StudentSidebar from "../studentComponent/StudentSidebar";
+import useAuth from "../../hooks/useAuth";
 
 const StudentPassword = () => {
   const [currentPassword, setCurrentPassword] = useState("");
@@ -10,6 +11,7 @@ const StudentPassword = () => {
   const [showCurrentPassword, setShowCurrentPassword] = useState(false);
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmNewPassword, setShowConfirmNewPassword] = useState(false);
+  const { auth } = useAuth();
 
   const toggleShowCurrentPassword = () => {
     setShowCurrentPassword(!showCurrentPassword);
@@ -72,8 +74,7 @@ const StudentPassword = () => {
                 <div className="relative mr-4">
                   <input
                     type={showCurrentPassword ? "text" : "password"}
-                    value={currentPassword}
-                    onChange={(e) => setCurrentPassword(e.target.value)}
+                    value={auth.password}
                     className="border border-[#CCC] rounded-md p-2 w-[316px] outline-none"
                     placeholder="Current Password"
                   />

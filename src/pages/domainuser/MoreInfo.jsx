@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { CustomButton } from "../../static/button";
 import useAuth from "../../hooks/useAuth";
 
-const Register = () => {
+const MoreInfo = () => {
   const navigate = useNavigate();
   const { auth, setAuth } = useAuth();
 
@@ -12,29 +12,25 @@ const Register = () => {
     navigate("/signin");
   };
 
-  const [showPassword, setShowPassword] = useState(false);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [password, setPassword] = useState("");
-  const [logo, setLogo] = useState(null);
-  // const [passwordError, setPasswordError] = useState("");
+  const [genotype, setGenotype] = useState("");
+  const [bloodgroup, setBloodgroup] = useState("");
+  const [disabled, setDisabled] = useState("");
+  const [alergies, setAlergies] = useState("");
+  const [bmi, setBmi] = useState("");
 
-  const handlePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
-
-  const handleLogoChange = (e) => {
-    // Handle file input change and update the state
-    const file = e.target.files[0];
-    setLogo(file);
-  };
 
   console.log(auth);
   const handleSubmit = (e) => {
     e.preventDefault();
-    setAuth({ name, email, phone, password, logo });
-    navigate("/questions");
+    setAuth((prevAuth) => ({
+      ...prevAuth,
+      genotype,
+      bloodgroup,
+      disabled,
+      alergies,
+      bmi,
+    }));
+    navigate("/studentdashboard");
   };
 
   return (
@@ -57,104 +53,89 @@ const Register = () => {
         <div className="pt-10 mx-auto">
           <div className="items-center px-12 text-center pb-9">
             <h1 className="text-[#00395B] text-4xl font-bold leading-[146.5%] pb-2">
-              Create an Account
+              Let&apos;s know more about you
             </h1>
             <p className="text-base font-medium leading-[146.5%]">
-              Sign up and join us in transforming university healthcare
+              Give more information about yourself
             </p>
           </div>
 
           <form onSubmit={handleSubmit}>
             <div>
-              {/* LOGO UPLOAD */}
-              <label htmlFor="logoUpload">Logo:</label>
-              <div className="pt-5 pb-10">
-                <input
-                  type="file"
-                  id="logoUpload"
-                  name="logo"
-                  accept="image/*"
-                  onChange={handleLogoChange}
-                />
-                {/* <input type="submit" value="Upload" /> */}
-              </div>
-              <label htmlFor="universityName">Full Name:</label> <br />
+              <label htmlFor="universityName">Genotype:</label> <br />
               <div className="pt-3 pb-6">
                 <input
                   className="w-[516px] h-12 bg-transparent border border-[#CCC] rounded-lg outline-none p-2"
-                  placeholder="e.g., John Doe"
+                  placeholder="e.g., AA "
                   type="text"
                   id="universityName"
                   name="universityName"
                   onChange={(e) => {
-                    setName(e.target.value);
+                    setGenotype(e.target.value);
                   }}
                 />
               </div>
-              <label htmlFor="universityEmail">Email Address:</label>{" "}
+              <label htmlFor="universityEmail">Blood group:</label>{" "}
               <br />
               <div className="pt-3 pb-6">
                 <input
                   className="w-[516px] h-12 bg-transparent border border-[#CCC] rounded-lg outline-none p-2"
-                  placeholder="e.g., john.doe@gmail.com"
-                  type="email"
+                  placeholder="e.g., O+"
+                  type="text"
                   id="universityEmail"
                   name="universityEmail"
                   onChange={(e) => {
-                    setEmail(e.target.value);
+                    setBloodgroup(e.target.value);
                   }}
                 />
               </div>
-              <label htmlFor="universityPhone">Phone Number:</label>{" "}
+              <label htmlFor="universityEmail">Disabled:</label>{" "}
               <br />
               <div className="pt-3 pb-6">
                 <input
                   className="w-[516px] h-12 bg-transparent border border-[#CCC] rounded-lg outline-none p-2"
-                  placeholder="e.g (123) 456-789-0000"
-                  type="tel"
-                  id="universityPhone"
-                  name="universityPhone"
+                  placeholder="e.g., Yes or No"
+                  type="text"
+                  id="universityEmail"
+                  name="universityEmail"
                   onChange={(e) => {
-                    setPhone(e.target.value);
+                    setDisabled(e.target.value);
                   }}
                 />
               </div>
-              <label htmlFor="password">Password:</label>
-              <div className="flex justify-between items-center border border-[#CCC] rounded-lg mt-3 mb-3">
-                <div>
-                  <input
-                    className="h-12 p-2 bg-transparent outline-none w-96"
-                    placeholder="Input password"
-                    type={showPassword ? "text" : "password"}
-                    id="password"
-                    name="password"
-                    value={password}
-                    minLength={10} // Enforce minimum length
-                    onChange={(e) => {
-                      setPassword(e.target.value);
-                    }}
-                  />
-                </div>
-                <div
-                  className="p-2 cursor-pointer text-base font-medium text-[#004C79]"
-                  onClick={handlePasswordVisibility}
-                >
-                  <h1>{showPassword ? "Hide" : "Show"}</h1>
-                </div>
+              <label htmlFor="universityPhone">Allergies:</label>{" "}
+              <br />
+              <div className="pt-3 pb-6">
+                <input
+                  className="w-[516px] h-12 bg-transparent border border-[#CCC] rounded-lg outline-none p-2"
+                  placeholder="e.g Lactose intolerant"
+                  type="text"
+                  id="universityPhone"
+                  name="universityPhone"
+                  onChange={(e) => {
+                    setAlergies(e.target.value);
+                  }}
+                />
               </div>
-              {/* {passwordError && (
-              <div className="mt-2 text-red-500">
-                <p>{passwordError}</p>
+              <label htmlFor="universityPhone">BMI:</label>{" "}
+              <br />
+              <div className="pt-3 pb-6">
+                <input
+                  className="w-[516px] h-12 bg-transparent border border-[#CCC] rounded-lg outline-none p-2"
+                  placeholder="e.g 80kg"
+                  type="text"
+                  id="universityPhone"
+                  name="universityPhone"
+                  onChange={(e) => {
+                    setBmi(e.target.value);
+                  }}
+                />
               </div>
-            )} */}
             </div>
-            <h1 className="pb-9">
-              Password should include an uppercase, lowercase, and digits
-            </h1>
             <div className="text-[#FFF] pb-8">
               <CustomButton
                 width="100%"
-                content="Get Started"
+                content="Continue"
                 backgroundColor="#005F97"
               />
             </div>
@@ -173,4 +154,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default MoreInfo;

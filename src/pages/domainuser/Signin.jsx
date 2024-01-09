@@ -80,7 +80,7 @@ const SignIn = () => {
 					</div>
 
 					<div>
-						<label htmlFor='universityEmail'>University Email Address:</label>
+						<label htmlFor='universityEmail'>Email Address:</label>
 						<div className='pt-3 pb-6'>
 							<input
 								className='w-[516px] h-12 bg-transparent border border-[#CCC] rounded-lg outline-none p-2'
