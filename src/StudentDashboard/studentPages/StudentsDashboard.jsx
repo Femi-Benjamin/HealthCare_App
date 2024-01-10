@@ -231,27 +231,22 @@ const StudentsDashboard = () => {
 								<div className='overflow-x-auto'>
 									<div className='mb-3'>
 										<h1 className='text-xl font-bold'>Registration Number:</h1>
-										<p>17/SC/MC/1284</p>
+										<p>IFT/16/0112</p>
 									</div>
 
 									<div className='mb-3'>
 										<h1 className='text-xl font-bold'>Name:</h1>
-										<p>Olalekan Taiwo</p>
-									</div>
-
-									<div className='mb-3'>
-										<h1 className='text-xl font-bold'>Faculty:</h1>
-										<p>Sciences</p>
+										<p>Gidado Olayiwola</p>
 									</div>
 
 									<div className='mb-3'>
 										<h1 className='text-xl font-bold'>Department:</h1>
-										<p>Microbiology</p>
+										<p>Information Technology</p>
 									</div>
 
 									<div className='mb-3'>
 										<h1 className='text-xl font-bold'>Contact:</h1>
-										<p>{auth.email}</p>
+										<p>gidado@gmail.com</p>
 									</div>
 
 									<div className='mb-3'>

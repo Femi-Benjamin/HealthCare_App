@@ -82,7 +82,7 @@ const StudentProfile = () => {
 					<div>
 						<div className='grid grid-cols-2 gap-10 mb-6'>
 							<div>
-								<label htmlFor='universityName'>University Name:</label>
+								<label htmlFor='universityName'> Name:</label>
 								<div className='pt-3 pb-6'>
 									<input
 										className='w-[316px] h-12 bg-transparent border border-[#CCC] rounded-lg outline-none p-2'
@@ -90,7 +90,7 @@ const StudentProfile = () => {
 										type='text'
 										id='universityName'
 										name='universityName'
-										value={auth.name}
+										value="Gidado Olayiwola"
 									/>
 								</div>
 							</div>
@@ -104,13 +104,13 @@ const StudentProfile = () => {
 										type='email'
 										id='universityEmail'
 										name='universityEmail'
-										value={auth.email}
+										value="gidado@gmail.com"
 									/>
 								</div>
 							</div>
 
 							<div>
-								<label htmlFor='universityPhone'>University Phone Number:</label> <br />
+								<label htmlFor='universityPhone'>Matrix Number:</label> <br />
 								<div className='pt-3 pb-6'>
 									<input
 										className='w-[316px] h-12 bg-transparent border border-[#CCC] rounded-lg outline-none p-2'
@@ -118,7 +118,21 @@ const StudentProfile = () => {
 										type='tel'
 										id='universityPhone'
 										name='universityPhone'
-										value={auth.phone}
+										value="IFT/16/0112"
+									/>
+								</div>
+							</div>
+
+							<div>
+								<label htmlFor='universityPhone'>Department:</label> <br />
+								<div className='pt-3 pb-6'>
+									<input
+										className='w-[316px] h-12 bg-transparent border border-[#CCC] rounded-lg outline-none p-2'
+										placeholder='e.g (123) 456-789-0000'
+										type='tel'
+										id='universityPhone'
+										name='universityPhone'
+										value="Information Technology"
 									/>
 								</div>
 							</div>
