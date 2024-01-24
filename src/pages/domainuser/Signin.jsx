@@ -147,7 +147,7 @@ const SignIn = () => {
 
 					<button
 						onClick={handleLogin}
-						className={`w-[516px] p-2 rounded-md bg-[#005F97] text-white ${!email || !password || passwordError ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+						className={`w-[516px] p-2 rounded-md bg-[#005F97] text-white mb-5 ${!email || !password || passwordError ? 'cursor-not-allowed' : 'cursor-pointer'}`}
 						disabled={!email || !password || passwordError}
 					>
 						Login
