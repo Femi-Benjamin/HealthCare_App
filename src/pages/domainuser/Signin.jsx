@@ -1,7 +1,6 @@
 import nurse from '../../assets/nurse.svg';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { CustomButton } from '../../static/button';
 
 const SignIn = () => {
 	const navigate = useNavigate();
@@ -14,6 +13,7 @@ const SignIn = () => {
 	const [password, setPassword] = useState('');
 	const [passwordError, setPasswordError] = useState('');
 	const [userType, setUserType] = useState('doctor');
+	const [email, setEmail] = useState('');
 
 	const handlePasswordVisibility = () => {
 		setShowPassword(!showPassword);
@@ -22,14 +22,12 @@ const SignIn = () => {
 	const handlePasswordChange = (e) => {
 		const newPassword = e.target.value;
 		setPassword(newPassword);
-		validatePassword(newPassword); // Assuming validatePassword is defined somewhere
+		validatePassword(newPassword);
 	};
 
 	const validatePassword = (password) => {
-		// Logic to validate password and update errors
 		const errors = [];
 
-		// Validation logic goes here:
 		if (password.length < 6) {
 			errors.push('Password should be at least 6 characters long');
 		}
@@ -41,33 +39,45 @@ const SignIn = () => {
 		setUserType(e.target.value);
 	};
 
-	const handleLogin = () => {
-		// Logic for checking user type and navigating accordingly
-		if (userType === 'doctor') {
-			navigate('/dashboarrd');
-		} else if (userType === 'student') {
-			navigate('/studentdashboard');
-		}
-		// Add more conditions if needed
+	const handleEmailChange = (e) => {
+		setEmail(e.target.value);
 	};
+
+	const handleLogin = () => {
+		// Validate email and other necessary validations
+		if (email && password && !passwordError) {
+			// Logic for checking user type and navigating accordingly
+			if (userType === 'doctor') {
+				navigate('/dashboarrd');
+			} else if (userType === 'student') {
+				navigate('/studentdashboard');
+			}
+		} else {
+			// Show error message for incomplete login details
+			alert('Please fill in all required fields');
+		}
+	};
+
 
 	return (
 		<>
 			<div className='flex bg-neutral-100'>
-				<div className='relative'>
-					{' '}
-					{/* Added a relative positioning */}
-					<img
-						className='h-screen'
-						src={nurse}
-						alt=''
-					/>
-					<div className='absolute text-center transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'>
-						{/* Overlay text */}
-						<h2 className='mb-4 text-2xl font-bold text-white'>
-							Through efficient healthcare management, you can better support your students&apos; diverse health
-							needs and foster a healthier, more vibrant campus
-						</h2>
+				<div className='md:block hidden'>
+					<div className='relative'>
+						{' '}
+						{/* Added a relative positioning */}
+						<img
+							className='h-screen'
+							src={nurse}
+							alt=''
+						/>
+						<div className='absolute text-center transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'>
+							{/* Overlay text */}
+							<h2 className='mb-4 text-2xl font-bold text-white'>
+								Through efficient healthcare management, you can better support your students&apos; diverse health
+								needs and foster a healthier, more vibrant campus
+							</h2>
+						</div>
 					</div>
 				</div>
 
@@ -83,18 +93,21 @@ const SignIn = () => {
 						<label htmlFor='universityEmail'>Email Address:</label>
 						<div className='pt-3 pb-6'>
 							<input
-								className='w-[516px] h-12 bg-transparent border border-[#CCC] rounded-lg outline-none p-2'
+								className='w-full h-12 bg-transparent border border-[#CCC] rounded-lg outline-none p-2'
 								placeholder='e.g., info@greaterheights@edu.ng'
 								type='email'
 								id='universityEmail'
 								name='universityEmail'
+								value={email}
+								onChange={handleEmailChange}
 							/>
 						</div>
+
 
 						<label htmlFor='userType'>Select Role:</label>
 						<div className='pt-3 pb-6'>
 							<select
-								className='w-[516px] h-12 bg-transparent border border-[#CCC] rounded-lg outline-none p-2'
+								className='w-full h-12 bg-transparent border border-[#CCC] rounded-lg outline-none p-2'
 								id='userType'
 								name='userType'
 								value={userType}
@@ -132,15 +145,13 @@ const SignIn = () => {
 						)}
 					</div>
 
-					<div className='text-[#FFF] pb-10'>
-						<CustomButton
-							width='516px'
-							content='Login'
-							backgroundColor='#005F97'
-							type='button'
-							onClick={handleLogin}
-						/>
-					</div>
+					<button
+						onClick={handleLogin}
+						className={`w-[516px] p-2 rounded-md bg-[#005F97] text-white mb-5 ${!email || !password || passwordError ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+						disabled={!email || !password || passwordError}
+					>
+						Login
+					</button>
 					<div>
 						<h1 className='text-base text-center cursor-pointer'>
 							{' '}
