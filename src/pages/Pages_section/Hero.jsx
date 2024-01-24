@@ -1,6 +1,6 @@
 import { CustomButton } from "../../static/button";
 import { useNavigate } from "react-router-dom";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import dashboard from "../../assets/dashboard.png";
 import Navbar from "../../layouts/Navbar";
 
@@ -10,7 +10,7 @@ const Hero = () => {
   const handleRegisterClick = () => {
     navigate("/register");
   };
-  
+
   return (
     <>
       <div>
@@ -37,10 +37,11 @@ const Hero = () => {
               />
             </div>
           </div>
-
+          <Link to='/dashboardd'>
             <div className="flex justify-center p-24">
               <img src={dashboard} alt="" />
             </div>
+          </Link>
         </div>
       </div>
     </>
