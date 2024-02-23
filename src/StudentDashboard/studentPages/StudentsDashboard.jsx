@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import DashboardNav from '../../DashboardLayout/component/DashboardNav';
 import StudentSidebar from '../../StudentDashboard/studentComponent/StudentSidebar';
 import supabase from '../../config/supabaseClient';
@@ -45,7 +47,8 @@ const StudentsDashboard = () => {
 				}
 
 				if (data) {
-					console.log(data);
+					// console.log(data);
+					
 					setDate('');
 					setName('');
 					setDepartment('');
@@ -59,11 +62,13 @@ const StudentsDashboard = () => {
 				setError('An error occurred while submitting the form');
 			} finally {
 				setIsSubmitting(false);
+				toast.success('Appointment booked successfully');
 			}
 		};
 
 		return (
 			<div className='p-5 mt-5 bg-white rounded-lg mb-7'>
+				<ToastContainer />
 				<h1 className='text-2xl font-bold text-[#00395B] mb-3  '>Book an Appointment</h1>
 				{error && (
 					<div className='text-center text-white h-[30px] w-[100%] rounded-lg bg-red-500'>{error}</div>
