@@ -8,6 +8,7 @@ import useAuth from '../../hooks/useAuth';
 const StudentProfile = () => {
 	const [selectedImage, setSelectedImage] = useState(null);
 	const { auth } = useAuth();
+	console.log(auth)
 
 	const handleImageChange = (e) => {
 		const file = e.target.files[0];
